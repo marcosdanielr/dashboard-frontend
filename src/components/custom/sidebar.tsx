@@ -40,7 +40,7 @@ export const Sidebar = () => {
 
 
   return (
-    <aside className='flex flex-col w-64 h-[calc(100vh-4.819375rem)] bg-white'>
+    <aside className='flex flex-col w-64 h-[calc(100vh-4.819375rem)] pt-14 pl-6 bg-white'>
 
       <ul className='flex flex-col gap-6'>
         {
