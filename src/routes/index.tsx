@@ -1,12 +1,19 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 import { Dashboard } from '../pages/dashboard'
+
+import {Layout} from '../components/custom/layout'
+
 import { RoutePathsEnum } from '@/constants/route-paths-enum'
 
 const router = createBrowserRouter([
   {
     path: RoutePathsEnum.HOME,
-    element: <Dashboard />,
+    element:
+    <Layout>
+      <Dashboard />
+    </Layout>
+    ,
   },
   {
     path: '/test',
