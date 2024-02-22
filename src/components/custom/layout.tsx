@@ -1,5 +1,7 @@
 import { ReactNode } from 'react'
+
 import { Header } from './header'
+import { Sidebar} from './sidebar'
 
 type LayoutProps = {
   children: ReactNode
@@ -7,9 +9,12 @@ type LayoutProps = {
 
 export const Layout = ({ children }: LayoutProps) => {
   return (
-    <div>
+    <div className='w-full'>
       <Header />
-      {children}
+      <div className='w-full flex'>
+        <Sidebar />
+        {children}
+      </div>
     </div>
   )
 }
