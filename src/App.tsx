@@ -1,9 +1,8 @@
-import { Button } from '@components/ui/button'
-import { Login } from './pages/login'
+import { Routes } from './routes'
 
 function App () {
   return (
-    <Login />
+    <Routes />
   )
 }
 
