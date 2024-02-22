@@ -1,9 +1,11 @@
 import { Routes } from './routes'
 
-function App () {
+import { Layout } from './components/custom/layout'
+
+export const App = () => {
   return (
-    <Routes />
+    <Layout>
+      <Routes />
+    </Layout>
   )
 }
-
-export default App

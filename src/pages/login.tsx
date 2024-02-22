@@ -1,15 +1,17 @@
 import { PasswordInput } from '@/components/custom/password-input'
+
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import logoIcon from '@assets/icons/logo.svg'
 import { Label } from '@radix-ui/react-label'
 
-export function Login () {
+import logo from '@assets/icons/logo.svg'
+
+export const Login = () => {
   return (
     <div className='bg-background flex items-center justify-center w-full h-screen'>
 
       <div className='bg-white flex flex-col items-center justify-center px-[4.25rem] py-8 gap-7 rounded-[0.5rem]'>
-        <img src={logoIcon} />
+        <img src={logo} alt="Flugo logo" />
 
         <form className='w-[24rem] flex flex-col items-center justify-center gap-7'>
           <div className="grid w-full items-center gap-1.5">

@@ -1,9 +1,11 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
+import { Dashboard } from '../pages/dashboard'
+
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <h2>Home</h2>,
+    element: <Dashboard />,
   },
   {
     path: '/test',
