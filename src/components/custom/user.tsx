@@ -15,7 +15,7 @@ import { useUser } from '@/hooks/use-user'
 import { UserIcon } from 'lucide-react'
 
 export const User = () => {
-  const { currentUser } = useUser()
+  const { currentUser, signOut } = useUser()
 
   return (
     <Popover>
@@ -57,7 +57,10 @@ export const User = () => {
 
           <Separator />
 
-          <li className='flex items-center gap-2 cursor-pointer text-sm font-medium h-8 ml-3'>
+          <li 
+            className='flex items-center gap-2 cursor-pointer text-sm font-medium h-8 ml-3'
+            onClick={signOut}
+          >
             <RxExit />
             Sair
           </li>

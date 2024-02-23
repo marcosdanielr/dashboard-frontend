@@ -22,11 +22,18 @@ export const useUser = () => {
     }
   }
 
+  const signOut = async () => {
+    await auth.signOut()
+    localStorage.clear()
+    navigate(RoutePathsEnum.HOME)
+  }
+
   const currentUser = auth.currentUser
 
   return {
     signIn,
     currentUser,
+    signOut,
     isAuthenticated
   }
 }
