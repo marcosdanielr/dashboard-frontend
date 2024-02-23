@@ -11,20 +11,26 @@ import { RiUser3Line } from 'react-icons/ri'
 import { PiGearBold } from 'react-icons/pi'
 import { RxExit } from 'react-icons/rx'
 import { Separator } from '../ui/separator'
+import { useUser } from '@/hooks/use-user'
+import { UserIcon } from 'lucide-react'
 
 export const User = () => {
+  const { currentUser } = useUser()
+
   return (
     <Popover>
       <PopoverTrigger asChild>
         <div className='flex items-center justify-center cursor-pointer'>
           <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" />
-            <AvatarFallback>CN</AvatarFallback>
+            <AvatarImage src={currentUser?.photoURL ?? ''} />
+            <AvatarFallback>
+              <UserIcon />
+            </AvatarFallback>
           </Avatar>
 
           <p className="text-sm ml-[0.478125rem]">
         Olá,{' '}
-            <b>usuário</b>
+            <b>{currentUser?.displayName ?? 'usuário'}</b>
           </p>
           <IoMdArrowDropdown className='mt-[0.18rem]' size="1.3rem" />
         </div>
@@ -33,7 +39,7 @@ export const User = () => {
       <PopoverContent className="w-44 px-0 py-1">
         <ul>
           <li className='h-8 ml-3'>
-            <b>usuário</b>
+            <b>{currentUser?.displayName ?? 'usuário'}</b>
           </li>
           <Separator />
 

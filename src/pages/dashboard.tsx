@@ -1,3 +1,5 @@
+import { useUser } from '@/hooks/use-user'
+
 import { Card } from '@/components/custom/card'
 import { Chart } from '@/components/custom/chart'
 
@@ -15,6 +17,7 @@ import { dashboardCards, dashboardSelectOptions as selectOptions } from '@/const
 
 
 export const Dashboard = () => {
+  const { currentUser } = useUser()
 
   const cards = dashboardCards([22, 11, 10])
 
@@ -22,7 +25,7 @@ export const Dashboard = () => {
     <main className='w-full flex flex-col px-12 pt-14'>
       <div className='w-full'>
         <p className='text-2xl font-medium'>Olá. Seja bem-vindo,</p>
-        <b className='text-primary font-bold text-[1.75rem]'>usuário</b>
+        <b className='text-primary font-bold text-[1.75rem]'>{currentUser?.displayName ?? 'usuário'}</b>
       </div>
 
       <div className='w-full flex items-center gap-10 flex-wrap mt-12'>

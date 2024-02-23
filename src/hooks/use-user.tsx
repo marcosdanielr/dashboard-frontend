@@ -22,8 +22,11 @@ export const useUser = () => {
     }
   }
 
+  const currentUser = auth.currentUser
+
   return {
     signIn,
+    currentUser,
     isAuthenticated
   }
 }
