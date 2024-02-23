@@ -9,11 +9,13 @@ type LayoutProps = {
 
 export const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className='w-full'>
+    <div className='w-full relative'>
       <Header />
       <div className='w-full flex'>
         <Sidebar />
-        {children}
+        <div className='w-full ml-64 mt-[4.819375rem]'>
+          {children}
+        </div>
       </div>
     </div>
   )

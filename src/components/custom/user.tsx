@@ -10,6 +10,7 @@ import { IoMdArrowDropdown } from 'react-icons/io'
 import { RiUser3Line } from 'react-icons/ri'
 import { PiGearBold } from 'react-icons/pi'
 import { RxExit } from 'react-icons/rx'
+import { Separator } from '../ui/separator'
 
 export const User = () => {
   return (
@@ -34,8 +35,7 @@ export const User = () => {
           <li className='h-8 ml-3'>
             <b>usuário</b>
           </li>
-
-          <div className='border-gray-200 w-full border-solid border-[0.0625rem]' />
+          <Separator />
 
           <li className='flex items-center gap-2 cursor-pointer text-sm font-medium h-8 ml-3'>
             <RiUser3Line />
@@ -49,7 +49,7 @@ export const User = () => {
           </li>
 
 
-          <div className='border-gray-200 w-full border-solid border-[0.0625rem]' />
+          <Separator />
 
           <li className='flex items-center gap-2 cursor-pointer text-sm font-medium h-8 ml-3'>
             <RxExit />

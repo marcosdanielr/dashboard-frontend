@@ -1,10 +1,11 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
-import { Dashboard } from '../pages/dashboard'
 
 import {Layout} from '../components/custom/layout'
 
 import { RoutePathsEnum } from '@/constants/route-paths-enum'
+import { Login } from '@/pages/login'
+import { Dashboard } from '@/pages/dashboard'
 
 const router = createBrowserRouter([
   {
@@ -13,11 +14,6 @@ const router = createBrowserRouter([
     <Layout>
       <Dashboard />
     </Layout>
-    ,
-  },
-  {
-    path: '/test',
-    element: <h2>Test</h2>,
   },
 ])
 

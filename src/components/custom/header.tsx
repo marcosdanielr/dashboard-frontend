@@ -13,7 +13,7 @@ export const Header = () => {
 
   return (
     <header 
-      className='w-full h-[4.819375rem] px-5 bg-white drop-shadow flex justify-between items-center'
+      className='w-full h-[4.819375rem] fixed z-20 px-5 bg-white drop-shadow flex justify-between items-center'
       onClick={handleGoToHomePage}
     >
       <img src={logo} alt="Flugo logo" className='cursor-pointer' /> 

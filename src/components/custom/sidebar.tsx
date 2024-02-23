@@ -37,10 +37,8 @@ export const Sidebar = () => {
     },
   ]
 
-
-
   return (
-    <aside className='flex flex-col w-64 h-[calc(100vh-4.819375rem)] pt-14 pl-6 bg-white'>
+    <aside className='flex flex-col w-64 h-[calc(100vh-4.819375rem)] top-[4.819375rem] z-10 pt-14 pl-6 bg-white fixed'>
 
       <ul className='flex flex-col gap-6'>
         {
@@ -48,7 +46,10 @@ export const Sidebar = () => {
             <li 
               key={option.title}
               onClick={option.onClick}
-              className={`cursor-pointer flex items-center font-medium text-[0.9375rem] ${location.pathname === option.path && 'text-primary'}`} 
+              className={`
+                cursor-pointer 
+                flex items-center 
+                font-medium text-[0.9375rem] ${location.pathname === option.path && 'text-primary'}`} 
             >
               <option.icon size='1.5rem'/>
 
@@ -57,7 +58,6 @@ export const Sidebar = () => {
           ))
         }
       </ul>
-
 
     </aside>
   )
