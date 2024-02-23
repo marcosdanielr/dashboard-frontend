@@ -17,7 +17,7 @@ git clone https://github.com/marcosdanielr/dashboard-frontend.git
 cd seu-repositorio
 ```
 
-4. Instale as dependências utilizando npm ou yarn:
+4. Instale as dependências utilizando npm:
 
 ```bash
 npm install
