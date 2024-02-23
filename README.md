@@ -1,30 +1,38 @@
-# React + TypeScript + Vite
+# Dashboard de Administrador
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto simples de dashboard de administrador desenvolvido utilizando Vite.
 
-Currently, two official plugins are available:
+## Instalação
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Certifique-se de ter o Node.js instalado na sua máquina.
+2. Clone este repositório:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+git clone https://github.com/marcosdanielr/dashboard-frontend.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+3. Navegue até o diretório do projeto:
+
+```bash
+cd seu-repositorio
+```
+
+4. Instale as dependências utilizando npm ou yarn:
+
+```bash
+npm install
+```
+
+5. Crie um arquivo `.env` na raiz do projeto de acordo com o modelo fornecido em `.env.example`.
+
+## Protótipo do Projeto
+
+O protótipo do projeto está disponível no Figma [aqui](https://www.figma.com/file/8J5qRCPz7OwSWaSK2KYGg8/flugo-adm-challenge?type=design&node-id=107-22328&mode=design&t=ow9gWVHR0CA7U9vp-0).
+
+## Demonstração
+
+Você pode acessar uma demonstração do projeto [aqui](https://flugo-dashboard-challenge.firebaseapp.com/).
+
+## Observação
+
+Certifique-se de ter a versão do Node.js 20.11.0.
