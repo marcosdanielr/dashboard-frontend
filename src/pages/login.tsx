@@ -37,7 +37,7 @@ export const Login = () => {
     <div className='bg-background flex items-center justify-center w-full h-screen'>
 
       <div className='bg-white flex flex-col items-center justify-center px-[4.25rem] py-8 gap-7 rounded-[0.5rem]'>
-        <img src={logo} alt="Flugo logo" />
+        <img src={logo} className='select-none' alt="Flugo logo" />
 
         <form className='w-[24rem] flex flex-col items-center justify-center gap-7' onSubmit={handleSubmit(handleSignIn)}>
           <div className="grid w-full items-center gap-1.5">

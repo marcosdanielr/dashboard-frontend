@@ -1,5 +1,4 @@
 import { IconType } from 'react-icons'
-import { MdAttachMoney } from 'react-icons/md'
 
 type CardProps = {
   title: string;
