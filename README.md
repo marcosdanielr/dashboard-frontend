@@ -14,7 +14,7 @@ git clone https://github.com/marcosdanielr/dashboard-frontend.git
 3. Navegue até o diretório do projeto:
 
 ```bash
-cd seu-repositorio
+cd dashboard-frontend
 ```
 
 4. Instale as dependências utilizando npm:
