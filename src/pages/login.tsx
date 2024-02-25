@@ -1,38 +1,38 @@
-import { useState } from "react";
-import { useUser } from "@/hooks/use-user";
+import { useState } from 'react'
+import { useUser } from '@/hooks/use-user'
 
-import { PasswordInput } from "@/components/custom/password-input";
+import { PasswordInput } from '@/components/custom/password-input'
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@radix-ui/react-label";
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Label } from '@radix-ui/react-label'
 
-import { SubmitHandler, useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from 'react-hook-form'
 
-import logo from "@assets/icons/logo.svg";
+import logo from '@assets/icons/logo.svg'
 
 type FormData = {
-  email: string;
-  password: string;
+  email: string
+  password: string
 };
 
 export const Login = () => {
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false)
 
-  const { register, handleSubmit } = useForm<FormData>();
-  const { signIn } = useUser();
+  const { register, handleSubmit } = useForm<FormData>()
+  const { signIn } = useUser()
 
   const handleSignIn: SubmitHandler<FormData> = async (data): Promise<void> => {
     if (!isLoading) {
-      setIsLoading(true);
+      setIsLoading(true)
 
-      const { email, password } = data;
+      const { email, password } = data
 
-      await signIn(email, password);
+      await signIn(email, password)
 
-      setIsLoading(false);
+      setIsLoading(false)
     }
-  };
+  }
 
   return (
     <div className="bg-background flex items-center justify-center w-full h-screen">
@@ -50,7 +50,7 @@ export const Login = () => {
               id="email"
               placeholder="Insira o seu e-mail"
               required
-              {...register("email")}
+              {...register('email')}
             />
           </div>
 
@@ -60,7 +60,7 @@ export const Login = () => {
               id="password"
               placeholder="Insira a sua senha"
               required
-              {...register("password")}
+              {...register('password')}
             />
           </div>
 
@@ -70,5 +70,5 @@ export const Login = () => {
         </form>
       </div>
     </div>
-  );
-};
+  )
+}
